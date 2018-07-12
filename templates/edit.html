@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="/welcome" method="POST">
+<form action="/" method="POST">
     <table>
         <tbody>
             <tr>
@@ -11,7 +11,7 @@
                 </td>
                 <td>
                     <input name="username" type="text"> 
-                    <span class="error">{{username_error}}</span>
+                    <span class="error">{{ username_error }}</span>
                    
                 </td>
             </tr>
@@ -21,7 +21,7 @@
                 </td>
                 <td>
                     <input name="password" type="password">
-                    <span class="error">{{password_error}}</span>
+                    <span class="error">{{ password_error }}</span>
                 </td>
             <tr>
                 <td>
@@ -29,7 +29,7 @@
                 </td>
                 <td>
                     <input name="verify password" type="password">
-                    <span class="error">{{password_again_error}}<span>
+                    <span class="error">{{ password_error }}<span>
                 </td>
              </tr>
              <tr>
@@ -38,7 +38,7 @@
                  </td>
                  <td>
                      <input name="email" type="text" size="20" minlength="3" maxlength="30">
-                     <span class="error">{{email_error}}</span>
+                     <span class="error">{{ email_error }}</span>
                  </td>
              </tr>
         </tbody>
