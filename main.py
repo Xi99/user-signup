@@ -37,10 +37,10 @@ def welcome(username=None):
 def submit():
     print(request.form) 
     if request.method == 'GET':
-        #error = request.args.get("error")
         return render_template(
             'edit.html',
-            )
+           )
+        
 
     elif request.method == 'POST':
         check_username = request.form['username']
@@ -54,7 +54,7 @@ def submit():
         none_error = ''
 
 
-        if check_password is ' ':
+        if check_password or check_verify_password == '':
             password_error = "Your passwords can't be blank"
 
         if check_password != check_verify_password:
