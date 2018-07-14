@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="/" method="POST">
+<form action="/submit" method="POST">
     <table>
         <tbody>
             <tr>
@@ -10,7 +10,7 @@
                     <label for="username">Username</label>
                 </td>
                 <td>
-                    <input name="username" type="text"> 
+                    <input name="username" type="text" value={{username}}> 
                     <span class="error">{{ username_error }}</span>
                    
                 </td>
@@ -37,17 +37,15 @@
                      <label for="email">Email (optional)</label>
                  </td>
                  <td>
-                     <input name="email" type="text" size="20" minlength="3" maxlength="30">
+                     <input name="email" type="text" size="20" minlength="3" maxlength="30" value={{email}}>
                      <span class="error">{{ email_error }}</span>
                  </td>
              </tr>
         </tbody>
     </table>
     <input type="submit">
+    <span class="error">{{ none_error }}</span>
 
 </form>
 
-{% if error %}
-  <p class='error'>{{ error }}</p>
-{% endif %}
 {% endblock %}
